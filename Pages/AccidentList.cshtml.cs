@@ -6,7 +6,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace IntexCrash.Pages
+namespace intex2.Pages
 {
     public class PrivacyModel : PageModel
     {

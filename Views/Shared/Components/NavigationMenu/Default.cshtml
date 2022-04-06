@@ -1,0 +1,13 @@
+﻿@{
+}
+
+@model IEnumerable<string>
+<a class="btn btn-block btn-outline-secondary" asp-controller="Home" asp-action="AccidentList" asp-route-county=""> Home </a>
+
+@foreach (string t in Model)
+{
+    <a class="btn btn-block
+       @(t == ViewBag.TeamName ? "btn-primary": "btn-outline-secondary")" asp-controller="Home" asp-action="AccidentList" asp-route-county="@t">@t</a>
+}
+
+

@@ -1,5 +1,5 @@
 ﻿using System;
-using IntexCrash.Data;
+using intex2.Data;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.UI;
@@ -7,8 +7,8 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
-[assembly: HostingStartup(typeof(IntexCrash.Areas.Identity.IdentityHostingStartup))]
-namespace IntexCrash.Areas.Identity
+[assembly: HostingStartup(typeof(intex2.Areas.Identity.IdentityHostingStartup))]
+namespace intex2.Areas.Identity
 {
     public class IdentityHostingStartup : IHostingStartup
     {

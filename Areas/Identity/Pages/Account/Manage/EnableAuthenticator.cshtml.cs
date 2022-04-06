@@ -11,7 +11,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.Extensions.Logging;
 
-namespace IntexCrash.Areas.Identity.Pages.Account.Manage
+namespace intex2.Areas.Identity.Pages.Account.Manage
 {
     public class EnableAuthenticatorModel : PageModel
     {
@@ -148,7 +148,7 @@ namespace IntexCrash.Areas.Identity.Pages.Account.Manage
         {
             return string.Format(
                 AuthenticatorUriFormat,
-                _urlEncoder.Encode("IntexCrash"),
+                _urlEncoder.Encode("intex2"),
                 _urlEncoder.Encode(email),
                 unformattedKey);
         }
