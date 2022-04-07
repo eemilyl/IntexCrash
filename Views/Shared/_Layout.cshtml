@@ -11,13 +11,14 @@
     <header>
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-dark bg-success border-bottom box-shadow mb-3">
             <div class="container">
-                
+
                 <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">intex2</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
+                    <partial name="_LoginPartial" />
                     <ul class="navbar-nav flex-grow-1">
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
@@ -31,20 +32,20 @@
         </nav>
     </header>
     @*<div class="container">*@
-        <partial name="_CookieConsentPartial" />
-        <div class="row">
-            <main role="main" class="col-12">
-                @RenderBody()
-            </main>
+    <partial name="_CookieConsentPartial" />
+    <div class="row">
+        <main role="main" class="col-12">
+            @RenderBody()
+        </main>
+    </div>
+    <footer class="border-top footer bg-success text-white">
+        <div class="container bg-gradient text-white">
+            &copy; 2022 - intex2 - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
         </div>
-        <footer class="border-top footer bg-success text-white">
-            <div class="container bg-gradient text-white">
-                &copy; 2022 - intex2 - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-            </div>
-        </footer>
-        <script src="~/lib/jquery/dist/jquery.min.js"></script>
-        <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-        <script src="~/js/site.js" asp-append-version="true"></script>
-        @RenderSection("Scripts", required: false)
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @RenderSection("Scripts", required: false)
 </body>
 </html>

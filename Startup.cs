@@ -38,6 +38,17 @@ namespace intex2
                 options.MinimumSameSitePolicy = SameSiteMode.None;
             });
 
+            services.Configure<IdentityOptions>(options =>
+            {
+                // Default Password settings.
+                options.Password.RequireDigit = true;
+                options.Password.RequireLowercase = true;
+                options.Password.RequireNonAlphanumeric = true;
+                options.Password.RequireUppercase = true;
+                options.Password.RequiredLength = 15;
+                options.Password.RequiredUniqueChars = 1;
+            });
+
             services.AddControllersWithViews();
             services.AddDbContext<AccidentsDbContext>(options =>
             {
