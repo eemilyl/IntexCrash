@@ -7,7 +7,7 @@
 @foreach (string t in Model)
 {
     <a class="btn btn-block
-       @(t == ViewBag.TeamName ? "btn-primary": "btn-outline-secondary")" asp-controller="Home" asp-action="AccidentList" asp-route-county="@t">@t</a>
+       @(ViewBag.COUNTY_NAME == t ? "btn-primary": "btn-outline-secondary")" asp-controller="Home" asp-action="AccidentList" asp-route-county="@t">@t</a>
 }
 
 
