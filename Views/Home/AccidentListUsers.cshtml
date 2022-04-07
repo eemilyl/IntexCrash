@@ -1,0 +1,68 @@
+﻿@{
+    ViewData["Title"] = "Accident List Users";
+}
+
+<h1>@ViewBag.name</h1>
+@using Microsoft.AspNetCore.Identity
+
+@model AccidentsViewModel
+
+
+<div class="container">
+    <main role="main" class="pb-3">
+        <div class="row">
+            <div class="col-2">
+                <div class="d-grid gap-1 ">
+                    <vc:navigation-menu></vc:navigation-menu>
+                </div>
+            </div>
+            <div class="col-10">
+
+                <div page-model="@Model.PageInfo" page-action="AccidentList" page-classes-enabled="true"
+                     page-class="btn" page-class-normal="btn-outline-dark"
+                     page-class-selected="btn-primary" class="btn-group pull-right m-1">
+
+                </div>
+                <table class="table table-bordered table-striped">
+
+                    <thead class="font-weight-bold">
+
+                        <partial name="_CookieConsentPartial" />
+                        <tr class="text-primary">
+
+                            <td>Crash ID:  </td>
+                            <td>Route:  </td>
+                            <td>Mile Point:  </td>
+                            <td>Main Road Name: </td>
+                            <td>City:  </td>
+                            <td>County Name: </td>
+                            <td>Severity:  </td>
+
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                        @foreach (var x in Model.Accidents)
+                        {
+                            <tr>
+
+                                <td>@x.CRASH_ID </td>
+                                <td>@x.ROUTE </td>
+                                <td>@x.MILEPOINT </td>
+
+                                <td>@x.MAIN_ROAD_NAME </td>
+                                <td>@x.CITY </td>
+                                <td>@x.COUNTY_NAME </td>
+                                <td>@x.CRASH_SEVERITY_ID</td>
+
+                            </tr>
+
+                        }
+
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </main>
+</div>

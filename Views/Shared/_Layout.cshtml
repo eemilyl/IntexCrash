@@ -1,9 +1,20 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta http-equiv="Content-Security-Policy"
+          content="base-uri 'self';
+               block-all-mixed-content;
+               default-src 'self';
+               img-src data: https:;
+               object-src 'none';
+               script-src 'self'
+                          'sha256-v8v3RKRPmN4odZ1CWM5gw80QKPCCWMcpNeOmimNL2AA='
+                          'unsafe-eval';
+               style-src 'self';
+               upgrade-insecure-requests;">
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] Cut The Crush Utah</title>
+    <title>@ViewData["Title"] Cut The Crash Utah</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" />
 </head>
@@ -12,7 +23,7 @@
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-dark bg-success border-bottom box-shadow mb-3">
             <div class="container">
 
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index"> Cut The Crush Utah </a>
+                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index"> Cut The Crash Utah </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -23,15 +34,20 @@
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
                         </li>
+
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="AccidentList">Accident List</a>
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="AccidentListUsers">Accident List</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="AccidentList">Admin</a>
                         </li>
                     </ul>
                 </div>
             </div>
         </nav>
     </header>
-    @*<div class="container">*@
+
     <partial name="_CookieConsentPartial" />
     <div class="row">
         <main role="main" class="col-12">

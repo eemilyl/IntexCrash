@@ -30,10 +30,10 @@
                 </div>
                 <table class="table table-bordered table-striped">
 
-                    <thead class="font-weight-bold">
+                    <thead class="font-weight-bold" >
 
                         <partial name="_CookieConsentPartial" />
-                        <tr>
+                        <tr class="text-primary">
 
                             <td>Crash ID:  </td>
                             <td>Route:  </td>
@@ -44,7 +44,7 @@
                             <td>City:  </td>
                             <td>County Name: </td>
                             <td>Severity:  </td>
-                            <td> <a asp-controller="Home" asp-action="NewAccident"> Add new accident </a> </td>
+                            <td> <a asp-controller="Home" asp-action="NewAccident" class="btn btn-primary"> Add new accident </a> </td>
                             @*<td>Work Zone Related: </td>
                                 <td>Pedestrian Involved: </td>
                                 <td>Motorcycle Involved: </td>
@@ -112,8 +112,8 @@
                                     <td>@x.YEAR</td>*@
 
 
-                                <td><a asp-controller="Home" asp-action="Edit" asp-route-CRASHID="@x.CRASH_ID">Edit</a></td>
-                                <td><a asp-controller="Home" asp-action="Delete" asp-route-applicationid="@x.CRASH_ID">Delete</a></td>
+                                <td><a asp-controller="Home" class="btn btn-warning" asp-action="Edit" asp-route-CRASHID="@x.CRASH_ID">Edit</a></td>
+                                <td><a asp-controller="Home" class="btn btn-danger" asp-action="Delete" asp-route-applicationid="@x.CRASH_ID">Delete</a></td>
 
                             </tr>
 
