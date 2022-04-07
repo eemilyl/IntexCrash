@@ -48,7 +48,8 @@ namespace intex2.Controllers
                 .Where(c => c.COUNTY_NAME == county || county == null)
                 .OrderBy(x => x.CRASH_ID)
                 .Skip((pageNum - 1) * pageSize)
-                .Take(pageSize),
+                .Take(pageSize)
+                .ToList(),
 
                 PageInfo = new PageInfo
                 {
@@ -61,7 +62,7 @@ namespace intex2.Controllers
             return View(x);
         }
 
-        public IActionResult AdminAccidentList(string county, int pageNum = 1)
+        public IActionResult AccidentListUsers(string county, int pageNum = 1)
         {
             int pageSize = 10000;
 
@@ -73,7 +74,8 @@ namespace intex2.Controllers
                 .Where(c => c.COUNTY_NAME == county || county == null)
                 .OrderBy(x => x.CRASH_ID)
                 .Skip((pageNum - 1) * pageSize)
-                .Take(pageSize),
+                .Take(pageSize)
+                .ToList(),
                 
 
                 PageInfo = new PageInfo
@@ -91,31 +93,36 @@ namespace intex2.Controllers
         [HttpGet]
         public IActionResult NewAccident()
         {
+
             ViewBag.Accidents = _repo.Accidents.ToList();
+
             return View();
         }
+
+
 
         [HttpPost]
         public IActionResult NewAccident(Accident ar)
         {
-            if (ModelState.IsValid)
-            {
+            //if (ModelState.IsValid)
+            //{
                 _repo.Add(ar);
-                    _repo.SaveChanges();
+                _repo.SaveChanges();
 
                 return View("Confirmation", ar);
-            }
+            //}
 
-            //else //if invalid
-            {
-                ViewBag.Accidents = _repo.Accidents.ToList();
-                return View(ar);
-            }
+            ////else //if invalid
+            ////{
+            //    ViewBag.Accidents = _repo.Accidents.ToList();
+            //    return View(ar);
+            //}
         }
 
             [HttpGet]
         public IActionResult Edit(int CRASHID)
         {
+
             var application = _repo.Accidents.Single(x => x.CRASH_ID == CRASHID);
 
             return View("NewAccident", application);

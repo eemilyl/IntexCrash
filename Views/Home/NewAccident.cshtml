@@ -5,112 +5,133 @@
 @model intex2.Models.Accident
 
 
-<h1> Add new Accident </h1>
-
-<div>
-    <form method="post">
-        <div asp-validation-summary="All"> </div>
-
-        <label asp-for="CRASH_ID"></label>
-        <input type="hidden"asp-for="CRASH_ID" /> <br />
-
-        <label asp-for="ROUTE"> Route: </label>
-        <input asp-for="ROUTE" /> <br />
-
-        <label asp-for="MILEPOINT"> MILE POINT: </label>
-        <input asp-for="MILEPOINT" /> <br />
-
-        <label asp-for="LAT_UTM_Y"> LAT_UTM_Y: </label>
-        <input asp-for="LAT_UTM_Y" /> <br />
-
-        <label asp-for="LONG_UTM_X"> LONG_UTM_X: </label>
-        <input asp-for="LONG_UTM_X" /> <br />
-
-        <label asp-for="MAIN_ROAD_NAME"> MAIN_ROAD_NAME: </label>
-        <input asp-for="MAIN_ROAD_NAME" /> <br />
-
-        <label asp-for="CITY"> CITY: </label>
-        <input asp-for="CITY" /> <br />
-
-        <label asp-for="COUNTY_NAME"> COUNTY_NAME: </label>
-        <input asp-for="COUNTY_NAME" /> <br />
-
-        <label asp-for="CRASH_SEVERITY_ID"> CRASH_SEVERITY_ID: </label>
-        <input asp-for="CRASH_SEVERITY_ID" /> <br />
-
-        <label asp-for="WORK_ZONE_RELATED"> WORK_ZONE_RELATED: </label>
-        <input asp-for="WORK_ZONE_RELATED" /> <br />
-
-        <label asp-for="PEDESTRIAN_INVOLVED"> PEDESTRIAN_INVOLVED: </label>
-        <input asp-for="PEDESTRIAN_INVOLVED" /> <br />
-
-        <label asp-for="BICYCLIST_INVOLVED"> BICYCLIST_INVOLVED: </label>
-        <input asp-for="BICYCLIST_INVOLVED" /> <br />
-
-        <label asp-for="MOTORCYCLE_INVOLVED"> MOTORCYCLE_INVOLVED: </label>
-        <input asp-for="MOTORCYCLE_INVOLVED" /> <br />
-
-        <label asp-for="IMPROPER_RESTRAINT"> IMPROPER_RESTRAINT: </label>
-        <input asp-for="IMPROPER_RESTRAINT" /> <br />
-
-        <label asp-for="UNRESTRAINED"> UNRESTRAINED: </label>
-        <input asp-for="UNRESTRAINED" /> <br />
-
-        <label asp-for="DUI"> DUI: </label>
-        <input asp-for="DUI" /> <br />
-
-        <label asp-for="INTERSECTION_RELATED"> INTERSECTION_RELATED: </label>
-        <input asp-for="INTERSECTION_RELATED" /> <br />
-
-        <label asp-for="WILD_ANIMAL_RELATED"> WILD_ANIMAL_RELATED: </label>
-        <input asp-for="WILD_ANIMAL_RELATED" /> <br />
-
-        <label asp-for="DOMESTIC_ANIMAL_RELATED"> DOMESTIC_ANIMAL_RELATED: </label>
-        <input asp-for="DOMESTIC_ANIMAL_RELATED" /> <br />
-
-        <label asp-for="OVERTURN_ROLLOVER"> OVERTURN_ROLLOVER: </label>
-        <input asp-for="OVERTURN_ROLLOVER" /> <br />
-
-        <label asp-for="COMMERCIAL_MOTOR_VEH_INVOLVED"> COMMERCIAL_MOTOR_VEH_INVOLVED: </label>
-        <input asp-for="COMMERCIAL_MOTOR_VEH_INVOLVED" /> <br />
-
-        <label asp-for="TEENAGE_DRIVER_INVOLVED"> TEENAGE_DRIVER_INVOLVED: </label>
-        <input asp-for="TEENAGE_DRIVER_INVOLVED" /> <br />
-
-        <label asp-for="OLDER_DRIVER_INVOLVED"> OLDER_DRIVER_INVOLVED: </label>
-        <input asp-for="OLDER_DRIVER_INVOLVED" /> <br />
-
-        <label asp-for="NIGHT_DARK_CONDITION"> NIGHT_DARK_CONDITION: </label>
-        <input asp-for="NIGHT_DARK_CONDITION" /> <br />
-
-        <label asp-for="SINGLE_VEHICLE"> SINGLE_VEHICLE: </label>
-        <input asp-for="SINGLE_VEHICLE" /> <br />
-
-        <label asp-for="DISTRACTED_DRIVING"> DISTRACTED_DRIVING: </label>
-        <input asp-for="DISTRACTED_DRIVING" /> <br />
-
-        <label asp-for="DROWSY_DRIVING"> DROWSY_DRIVING: </label>
-        <input asp-for="DROWSY_DRIVING" /> <br />
-
-        <label asp-for="ROADWAY_DEPARTURE"> ROADWAY_DEPARTURE: </label>
-        <input asp-for="ROADWAY_DEPARTURE" /> <br />
-
-        <label asp-for="CRASH_TIME"> CRASH_TIME: </label>
-        <input asp-for="CRASH_TIME" /> <br />
-
-        <label asp-for="DAY"> DAY: </label>
-        <input asp-for="DAY" /> <br />
-
-        <label asp-for="MONTH"> MONTH: </label>
-        <input asp-for="MONTH" /> <br />
-
-        <label asp-for="YEAR"> YEAR: </label>
-        <input asp-for="YEAR" /> <br />
-
-        <button type="submit"> Submit Application</button>
+<div class="container px-5">
+    <div class="bg-light rounded-3 py-5 px-4 px-md-5 mb-5">
+        <div class="text-center mb-5">
+            <h1 class="fw-bolder">Add new Accident</h1>
+        </div>
+        <div class="row gx-5 justify-content-center text-center">
+            <div class="col-lg-8 col-xl-6">
+                <div>
+                    <form method="post">
+                        <div asp-validation-summary="All"> </div>
 
 
-    </form>
+                        <input type="hidden" asp-for="CRASH_ID" /><br />
+
+                        <label asp-for="ROUTE"> Route: </label>
+                        <input asp-for="ROUTE" /> <br />
+
+                        <label asp-for="MILEPOINT"> MILE POINT: </label>
+                        <input asp-for="MILEPOINT" /> <br />
+
+                        <label asp-for="LAT_UTM_Y"> LAT_UTM_Y: </label>
+                        <input asp-for="LAT_UTM_Y" /> <br />
+
+                        <label asp-for="LONG_UTM_X"> LONG_UTM_X: </label>
+                        <input asp-for="LONG_UTM_X" /> <br />
+
+                        <label asp-for="MAIN_ROAD_NAME"> MAIN_ROAD_NAME: </label>
+                        <input asp-for="MAIN_ROAD_NAME" /> <br />
+
+                        <label asp-for="CITY"> CITY: </label>
+                        <input asp-for="CITY" /> <br />
+
+                        <div class="form-floating mb-3">
+                            <label asp-for="COUNTY_NAME"> COUNTY_NAME: </label>
+                            <input asp-for="COUNTY_NAME" /> <br />
+                        </div>
+
+                        <div class="form-floating mb-3">
+                            <label asp-for="CRASH_SEVERITY_ID">Crash Severity: </label>
+                            <select asp-for="CRASH_SEVERITY_ID">
+                                <option>Select a Severity Level</option>
+                                <option>No Injury</option>
+                                <option>Possible Injury</option>
+                                <option>Suspected Minor Injury</option>
+                                <option>Suspected Serious Injury</option>
+                                <option>Fatal</option>
+                            </select>
+                            <br />
+                        </div>
+
+                            <label asp-for="WORK_ZONE_RELATED"> WORK_ZONE_RELATED: </label>
+                            <input asp-for="WORK_ZONE_RELATED" /> <br />
+
+                            <label asp-for="PEDESTRIAN_INVOLVED"> PEDESTRIAN_INVOLVED: </label>
+                            <input asp-for="PEDESTRIAN_INVOLVED" /> <br />
+
+                            <label asp-for="BICYCLIST_INVOLVED"> BICYCLIST_INVOLVED: </label>
+                            <input asp-for="BICYCLIST_INVOLVED" /> <br />
+
+                            <label asp-for="MOTORCYCLE_INVOLVED"> MOTORCYCLE_INVOLVED: </label>
+                            <input asp-for="MOTORCYCLE_INVOLVED" /> <br />
+
+                            <label asp-for="IMPROPER_RESTRAINT"> IMPROPER_RESTRAINT: </label>
+                            <input asp-for="IMPROPER_RESTRAINT" /> <br />
+
+                            <label asp-for="UNRESTRAINED"> UNRESTRAINED: </label>
+                            <input asp-for="UNRESTRAINED" /> <br />
+
+                            <label asp-for="DUI"> DUI: </label>
+                            <input asp-for="DUI" /> <br />
+
+                            <label asp-for="INTERSECTION_RELATED"> INTERSECTION_RELATED: </label>
+                            <input asp-for="INTERSECTION_RELATED" /> <br />
+
+                            <label asp-for="WILD_ANIMAL_RELATED"> WILD_ANIMAL_RELATED: </label>
+                            <input asp-for="WILD_ANIMAL_RELATED" /> <br />
+
+                            <label asp-for="DOMESTIC_ANIMAL_RELATED"> DOMESTIC_ANIMAL_RELATED: </label>
+                            <input asp-for="DOMESTIC_ANIMAL_RELATED" /> <br />
+
+                            <label asp-for="OVERTURN_ROLLOVER"> OVERTURN_ROLLOVER: </label>
+                            <input asp-for="OVERTURN_ROLLOVER" /> <br />
+
+                            <label asp-for="COMMERCIAL_MOTOR_VEH_INVOLVED"> COMMERCIAL_MOTOR_VEH_INVOLVED: </label>
+                            <input asp-for="COMMERCIAL_MOTOR_VEH_INVOLVED" /> <br />
+
+                            <label asp-for="TEENAGE_DRIVER_INVOLVED"> TEENAGE_DRIVER_INVOLVED: </label>
+                            <input asp-for="TEENAGE_DRIVER_INVOLVED" /> <br />
+
+                            <label asp-for="OLDER_DRIVER_INVOLVED"> OLDER_DRIVER_INVOLVED: </label>
+                            <input asp-for="OLDER_DRIVER_INVOLVED" /> <br />
+
+                            <label asp-for="NIGHT_DARK_CONDITION"> NIGHT_DARK_CONDITION: </label>
+                            <input asp-for="NIGHT_DARK_CONDITION" /> <br />
+
+                            <label asp-for="SINGLE_VEHICLE"> SINGLE_VEHICLE: </label>
+                            <input asp-for="SINGLE_VEHICLE" /> <br />
+
+                            <label asp-for="DISTRACTED_DRIVING"> DISTRACTED_DRIVING: </label>
+                            <input asp-for="DISTRACTED_DRIVING" /> <br />
+
+                            <label asp-for="DROWSY_DRIVING"> DROWSY_DRIVING: </label>
+                            <input asp-for="DROWSY_DRIVING" /> <br />
+
+                            <label asp-for="ROADWAY_DEPARTURE"> ROADWAY_DEPARTURE: </label>
+                            <input asp-for="ROADWAY_DEPARTURE" /> <br />
+
+                            <label asp-for="CRASH_TIME"> CRASH_TIME: </label>
+                            <input asp-for="CRASH_TIME" /> <br />
+
+                            <label asp-for="DAY"> DAY: </label>
+                            <input asp-for="DAY" /> <br />
+
+                            <label asp-for="MONTH"> MONTH: </label>
+                            <input asp-for="MONTH" /> <br />
+
+                            <label asp-for="YEAR"> YEAR: </label>
+                            <input asp-for="YEAR" /> <br />
+
+                            <button type="submit"> Submit Application</button>
 
 
-</div>
+                    </form>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div

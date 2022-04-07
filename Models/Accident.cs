@@ -5,6 +5,7 @@ namespace intex2.Models
 {
     public class Accident
     {
+        public static int Count { get; internal set; }
         [Key]
         [Required]
         public int CRASH_ID { get; set; }
