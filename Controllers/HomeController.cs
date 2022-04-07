@@ -7,6 +7,8 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using intex2.Models;
 using intex2.Models.ViewModels;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Authorization;
 
 namespace intex2.Controllers
 {
@@ -33,6 +35,7 @@ namespace intex2.Controllers
             return View(accidents);
         }
 
+        [Authorize]
         public IActionResult AccidentList(string county, int pageNum = 1)
         {
             int pageSize = 10000;

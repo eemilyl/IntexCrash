@@ -3,8 +3,11 @@
 }
 
 <h1>@ViewBag.name</h1>
-
+@using Microsoft.AspNetCore.Identity
+@inject SignInManager<IdentityUser> SignInManager
+@inject UserManager<IdentityUser> UserManager
 @model AccidentsViewModel
+
 
 
 
