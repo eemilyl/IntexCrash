@@ -1,0 +1,20 @@
+﻿@{
+    ViewData["Title"] = "Calculator";
+}
+
+@model CalculatorData
+
+<form method="post" asp-controller="Inference" asp-action="Score">
+
+    <div><label>Longitude:</label><input asp-for="long_utm_x" value="" /></div>
+    <div><label>Latitude:</label><input asp-for="lat_utm_y" value="" /></div>
+    <div><label>Hour:</label><input asp-for="hour" value=""/></div>
+    <div><label>Month:</label><input asp-for="month" value="" /></div>
+    <div><label>Motorcycle Involved?</label><input asp-for="motorcycle_involved" value=""/></div>
+    <div><label>Pedestrian Involved?</label><input asp-for="pedestrian_involved" value="" /></div>
+    <div><label>Overturn Rollover?</label><input asp-for="overturn_rollover" value="" /></div>
+    <div><label>Bicyclist Involved?</label><input asp-for="bicyclist_involved" value="" /></div>
+    <div><label>Teenager Driver Involved?</label><input asp-for="teenage_driver_involved" value="" /></div>
+
+    <button type="submit">Calculate</button>
+</form>
