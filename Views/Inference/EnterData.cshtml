@@ -4,17 +4,101 @@
 
 @model CalculatorData
 
-<form method="post" asp-controller="Inference" asp-action="Score">
 
-    <div><label>Longitude:</label><input asp-for="long_utm_x" value="" /></div>
-    <div><label>Latitude:</label><input asp-for="lat_utm_y" value="" /></div>
-    <div><label>Hour:</label><input asp-for="hour" value=""/></div>
-    <div><label>Month:</label><input asp-for="month" value="" /></div>
-    <div><label>Motorcycle Involved?</label><input asp-for="motorcycle_involved" value=""/></div>
-    <div><label>Pedestrian Involved?</label><input asp-for="pedestrian_involved" value="" /></div>
-    <div><label>Overturn Rollover?</label><input asp-for="overturn_rollover" value="" /></div>
-    <div><label>Bicyclist Involved?</label><input asp-for="bicyclist_involved" value="" /></div>
-    <div><label>Teenager Driver Involved?</label><input asp-for="teenage_driver_involved" value="" /></div>
+<div class="container px-5">
+    <div class="bg-light rounded-3 py-5 px-4 px-md-5 mb-5">
+        <div class="text-center mb-5">
+            <h1 class="fw-bolder">Calculate Crash Severity Rating</h1>
+        </div>
+        <div class="row gx-5 justify-content-center text-center">
+            <div class="col-lg-8 col-xl-6">
+                <div>
+                    <form method="post" align="center" asp-controller="Inference" asp-action="Score">
 
-    <button type="submit">Calculate</button>
-</form>
+                        <div class="form-group row">
+                            <label class="col-sm-2 col-form-label">Longitude:</label>
+                            <div class="col-sm-12">
+                                <input class="form-control" asp-for="long_utm_x" value="" />
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label class="col-sm-2 col-form-label">Latitude:</label>
+                            <div class="col-sm-12">
+                                <input class="form-control" asp-for="lat_utm_y" value="" />
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label class="col-sm-2 col-form-label">Hour:</label>
+                            <div class="col-sm-12">
+                                <input class="form-control" asp-for="hour" value="" />
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label class="col-sm-2 col-form-label">Month:</label>
+                            <div class="col-sm-12">
+                                <input class="form-control" asp-for="month" value="" />
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label class="col-sm-2 col-form-label">Motorcycle Involved?</label>
+                            <div class="col-sm-12">
+                                <select class="form-control" asp-for="motorcycle_involved" id="exampleFormControlSelect1">
+                                    <option>0</option>
+                                    <option>1</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label class="col-sm-2 col-form-label"> Pedestrian Involved?</label>
+                            <div class="col-sm-12">
+                                <select class="form-control" asp-for="pedestrian_involved" id="exampleFormControlSelect1">
+                                    <option>0</option>
+                                    <option>1</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label class="col-sm-2 col-form-label">Overturn Rollover?</label>
+                            <div class="col-sm-12">
+                                <select class="form-control" asp-for="overturn_rollover" id="exampleFormControlSelect1">
+                                    <option>0</option>
+                                    <option>1</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label class="col-sm-2 col-form-label">Bicyclist Involved?</label>
+                            <div class="col-sm-12">
+                                <select class="form-control" asp-for="bicyclist_involved" id="exampleFormControlSelect1">
+                                    <option>0</option>
+                                    <option>1</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label class="col-sm-2 col-form-label">Teenager Driver Involved?</label>
+                            <div class="col-sm-12">
+                                <select class="form-control" asp-for="teenage_driver_involved" id="exampleFormControlSelect1">
+                                    <option>0</option>
+                                    <option>1</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <button type="submit">Calculate</button>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+                    
