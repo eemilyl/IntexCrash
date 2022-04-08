@@ -37,8 +37,8 @@ namespace intex2.Controllers
             return View(accidents);
         }
         // Authorize makes it so you have to login to view this page
-        [Authorize]
         // this is for displaying the data
+        [Authorize]
         public IActionResult AccidentList(string county, int pageNum = 1)
         {
             int pageSize = 10000;
