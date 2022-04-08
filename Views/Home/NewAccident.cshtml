@@ -19,119 +19,318 @@
 
                         <input type="hidden" asp-for="CRASH_ID" /><br />
 
-                        <label asp-for="ROUTE"> Route: </label>
-                        <input asp-for="ROUTE" /> <br />
-
-                        <label asp-for="MILEPOINT"> MILE POINT: </label>
-                        <input asp-for="MILEPOINT" /> <br />
-
-                        <label asp-for="LAT_UTM_Y"> LAT_UTM_Y: </label>
-                        <input asp-for="LAT_UTM_Y" /> <br />
-
-                        <label asp-for="LONG_UTM_X"> LONG_UTM_X: </label>
-                        <input asp-for="LONG_UTM_X" /> <br />
-
-                        <label asp-for="MAIN_ROAD_NAME"> MAIN_ROAD_NAME: </label>
-                        <input asp-for="MAIN_ROAD_NAME" /> <br />
-
-                        <label asp-for="CITY"> CITY: </label>
-                        <input asp-for="CITY" /> <br />
-
-                        <div class="form-floating mb-3">
-                            <label asp-for="COUNTY_NAME"> COUNTY_NAME: </label>
-                            <input asp-for="COUNTY_NAME" /> <br />
+                        <div class="form-group row">
+                            <label asp-for="ROUTE" class="col-sm-2 col-form-label">Route: </label>
+                            <div class="col-sm-12">
+                                <input asp-for="ROUTE" class="form-control">
+                            </div>
                         </div>
 
-                        <div class="form-floating mb-3">
-                            <label asp-for="CRASH_SEVERITY_ID">Crash Severity: </label>
-                            <select asp-for="CRASH_SEVERITY_ID">
-                                <option>Select a Severity Level</option>
-                                <option>No Injury</option>
-                                <option>Possible Injury</option>
-                                <option>Suspected Minor Injury</option>
-                                <option>Suspected Serious Injury</option>
-                                <option>Fatal</option>
-                            </select>
+
+                        <div class="form-group row">
+                            <label asp-for="MILEPOINT" class="col-sm-2 col-form-label">MILEPOINT: </label>
+                            <div class="col-sm-12">
+                                <input asp-for="MILEPOINT" class="form-control">
+                            </div>
+                        </div>
+
+
+                        <div class="form-group row">
+                            <label asp-for="LAT_UTM_Y" class="col-sm-2 col-form-label">LAT_UTM_Y: </label>
+                            <div class="col-sm-12">
+                                <input asp-for="LAT_UTM_Y" class="form-control">
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label asp-for="LONG_UTM_X" class="col-sm-2 col-form-label">LONG_UTM_X: </label>
+                            <div class="col-sm-12">
+                                <input asp-for="LONG_UTM_X" class="form-control">
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label asp-for="MAIN_ROAD_NAME" class="col-sm-2 col-form-label">MAIN_ROAD_NAME: </label>
+                            <div class="col-sm-12">
+                                <input asp-for="MAIN_ROAD_NAME" class="form-control">
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label asp-for="CITY" class="col-sm-2 col-form-label">CITY: </label>
+                            <div class="col-sm-12">
+                                <input asp-for="CITY" class="form-control">
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label asp-for="COUNTY_NAME" class="col-sm-2 col-form-label">COUNTY_NAME: </label>
+                            <div class="col-sm-12">
+                                <input asp-for="COUNTY_NAME" class="form-control">
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label asp-for="CRASH_SEVERITY_ID" class="col-sm-2 col-form-label">Crash Severity: </label>
+                            <div class="col-sm-12">
+                                <select asp-for="CRASH_SEVERITY_ID" class="form-control">
+                                    <option>Select a Severity Level</option>
+                                    <option>No Injury</option>
+                                    <option>Possible Injury</option>
+                                    <option>Suspected Minor Injury</option>
+                                    <option>Suspected Serious Injury</option>
+                                    <option>Fatal</option>
+                                </select>
+                            </div>
+                                <br />
+                            </div>
+
+                            <div class="form-group row">
+                                <label asp-for="WORK_ZONE_RELATED" class="col-sm-2 col-form-label">WORK_ZONE_RELATED: </label>
+                                <div class="col-sm-12">
+                                    <select asp-for="WORK_ZONE_RELATED" class="form-control">
+                                        <option>Select an option</option>
+                                        <option>False</option>
+                                        <option>True</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="form-group row">
+                                <label asp-for="PEDESTRIAN_INVOLVED" class="col-sm-2 col-form-label">PEDESTRIAN_INVOLVED: </label>
+                                <div class="col-sm-12">
+                                    <select asp-for="PEDESTRIAN_INVOLVED" class="form-control">
+                                        <option>Select an option</option>
+                                        <option>False</option>
+                                        <option>True</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="form-group row">
+                                <label asp-for="BICYCLIST_INVOLVED" class="col-sm-2 col-form-label">BICYCLIST_INVOLVED: </label>
+                                <div class="col-sm-12">
+                                    <select asp-for="BICYCLIST_INVOLVED" class="form-control">
+                                        <option>Select an option</option>
+                                        <option>False</option>
+                                        <option>True</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="form-group row">
+                                <label asp-for="MOTORCYCLE_INVOLVED" class="col-sm-2 col-form-label">MOTORCYCLE_INVOLVED: </label>
+                                <div class="col-sm-12">
+                                    <select asp-for="MOTORCYCLE_INVOLVED" class="form-control">
+                                        <option>Select an option</option>
+                                        <option>False</option>
+                                        <option>True</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="form-group row">
+                                <label asp-for="IMPROPER_RESTRAINT" class="col-sm-2 col-form-label">IMPROPER_RESTRAINT: </label>
+                                <div class="col-sm-12">
+                                    <select asp-for="IMPROPER_RESTRAINT" class="form-control">
+                                        <option>Select an option</option>
+                                        <option>False</option>
+                                        <option>True</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="form-group row">
+                                <label asp-for="UNRESTRAINED" class="col-sm-2 col-form-label">UNRESTRAINED: </label>
+                                <div class="col-sm-12">
+                                    <select asp-for="UNRESTRAINED" class="form-control">
+                                        <option>Select an option</option>
+                                        <option>False</option>
+                                        <option>True</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="form-group row">
+                                <label asp-for="DUI" class="col-sm-2 col-form-label">DUI: </label>
+                                <div class="col-sm-12">
+                                    <select asp-for="DUI" class="form-control">
+                                        <option>Select an option</option>
+                                        <option>False</option>
+                                        <option>True</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="form-group row">
+                                <label asp-for="INTERSECTION_RELATED" class="col-sm-2 col-form-label">INTERSECTION_RELATED: </label>
+                                <div class="col-sm-12">
+                                    <select asp-for="INTERSECTION_RELATED" class="form-control">
+                                        <option>Select an option</option>
+                                        <option>False</option>
+                                        <option>True</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="form-group row">
+                                <label asp-for="WILD_ANIMAL_RELATED" class="col-sm-2 col-form-label">WILD_ANIMAL_RELATED: </label>
+                                <div class="col-sm-12">
+                                    <select asp-for="WILD_ANIMAL_RELATED" class="form-control">
+                                        <option>Select an option</option>
+                                        <option>False</option>
+                                        <option>True</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="form-group row">
+                                <label asp-for="DOMESTIC_ANIMAL_RELATED" class="col-sm-2 col-form-label">DOMESTIC_ANIMAL_RELATED: </label>
+                                <div class="col-sm-12">
+                                    <select asp-for="DOMESTIC_ANIMAL_RELATED" class="form-control">
+                                        <option>Select an option</option>
+                                        <option>False</option>
+                                        <option>True</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="form-group row">
+                                <label asp-for="OVERTURN_ROLLOVER" class="col-sm-2 col-form-label">OVERTURN_ROLLOVER: </label>
+                                <div class="col-sm-12">
+                                    <select asp-for="OVERTURN_ROLLOVER" class="form-control">
+                                        <option>Select an option</option>
+                                        <option>False</option>
+                                        <option>True</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="form-group row">
+                                <label asp-for="COMMERCIAL_MOTOR_VEH_INVOLVED" class="col-sm-2 col-form-label">COMMERCIAL_MOTOR_VEH_INVOLVED: </label>
+                                <div class="col-sm-12">
+                                    <select asp-for="COMMERCIAL_MOTOR_VEH_INVOLVED" class="form-control">
+                                        <option>Select an option</option>
+                                        <option>False</option>
+                                        <option>True</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="form-group row">
+                                <label asp-for="TEENAGE_DRIVER_INVOLVED" class="col-sm-2 col-form-label">TEENAGE_DRIVER_INVOLVED: </label>
+                                <div class="col-sm-12">
+                                    <select asp-for="TEENAGE_DRIVER_INVOLVED" class="form-control">
+                                        <option>Select an option</option>
+                                        <option>False</option>
+                                        <option>True</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="form-group row">
+                                <label asp-for="OLDER_DRIVER_INVOLVED" class="col-sm-2 col-form-label">OLDER_DRIVER_INVOLVED: </label>
+                                <div class="col-sm-12">
+                                    <select asp-for="OLDER_DRIVER_INVOLVED" class="form-control">
+                                        <option>Select an option</option>
+                                        <option>False</option>
+                                        <option>True</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="form-group row">
+                                <label asp-for="NIGHT_DARK_CONDITION" class="col-sm-2 col-form-label">NIGHT_DARK_CONDITION: </label>
+                                <div class="col-sm-12">
+                                    <select asp-for="NIGHT_DARK_CONDITION" class="form-control">
+                                        <option>Select an option</option>
+                                        <option>False</option>
+                                        <option>True</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="form-group row">
+                                <label asp-for="SINGLE_VEHICLE" class="col-sm-2 col-form-label">SINGLE_VEHICLE: </label>
+                                <div class="col-sm-12">
+                                    <select asp-for="SINGLE_VEHICLE" class="form-control">
+                                        <option>Select an option</option>
+                                        <option>False</option>
+                                        <option>True</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="form-group row">
+                                <label asp-for="DISTRACTED_DRIVING" class="col-sm-2 col-form-label">DISTRACTED_DRIVING: </label>
+                                <div class="col-sm-12">
+                                    <select asp-for="DISTRACTED_DRIVING" class="form-control">
+                                        <option>Select an option</option>
+                                        <option>False</option>
+                                        <option>True</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="form-group row">
+                                <label asp-for="DROWSY_DRIVING" class="col-sm-2 col-form-label">DROWSY_DRIVING: </label>
+                                <div class="col-sm-12">
+                                    <select asp-for="DROWSY_DRIVING" class="form-control">
+                                        <option>Select an option</option>
+                                        <option>False</option>
+                                        <option>True</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="form-group row">
+                                <label asp-for="ROADWAY_DEPARTURE" class="col-sm-2 col-form-label">ROADWAY_DEPARTURE: </label>
+                                <div class="col-sm-12">
+                                    <select asp-for="ROADWAY_DEPARTURE" class="form-control">
+                                        <option>Select an option</option>
+                                        <option>False</option>
+                                        <option>True</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="form-group row">
+                                <label asp-for="CRASH_TIME" class="col-sm-2 col-form-label">CRASH_TIME (e.g. 18:20:20) </label>
+                                <div class="col-sm-14">
+                                    <input asp-for="CRASH_TIME" class="form-control">
+                                </div>
+                            </div>
+
+                            <div class="form-group row">
+                                <label asp-for="DAY" class="col-sm-4 col-form-label">DAY (e.g. 20): </label>
+                                <div class="col-sm-12">
+                                    <input asp-for="DAY" class="form-control">
+                                </div>
+                            </div>
+
+                            <div class="form-group row">
+                                <label asp-for="MONTH" class="col-sm-4 col-form-label">MONTH (e.g. 1-12): </label>
+                                <div class="col-sm-12">
+                                    <input asp-for="MONTH" class="form-control">
+                                </div>
+                            </div>
+
+                            <div class="form-group row">
+                                <label asp-for="YEAR" class="col-sm-4 col-form-label">YEAR (e.g. 2020): </label>
+                                <div class="col-sm-12">
+                                    <input asp-for="YEAR" class="form-control">
+                                </div>
+                            </div>
+
                             <br />
-                        </div>
-
-                            <label asp-for="WORK_ZONE_RELATED"> WORK_ZONE_RELATED: </label>
-                            <input asp-for="WORK_ZONE_RELATED" /> <br />
-
-                            <label asp-for="PEDESTRIAN_INVOLVED"> PEDESTRIAN_INVOLVED: </label>
-                            <input asp-for="PEDESTRIAN_INVOLVED" /> <br />
-
-                            <label asp-for="BICYCLIST_INVOLVED"> BICYCLIST_INVOLVED: </label>
-                            <input asp-for="BICYCLIST_INVOLVED" /> <br />
-
-                            <label asp-for="MOTORCYCLE_INVOLVED"> MOTORCYCLE_INVOLVED: </label>
-                            <input asp-for="MOTORCYCLE_INVOLVED" /> <br />
-
-                            <label asp-for="IMPROPER_RESTRAINT"> IMPROPER_RESTRAINT: </label>
-                            <input asp-for="IMPROPER_RESTRAINT" /> <br />
-
-                            <label asp-for="UNRESTRAINED"> UNRESTRAINED: </label>
-                            <input asp-for="UNRESTRAINED" /> <br />
-
-                            <label asp-for="DUI"> DUI: </label>
-                            <input asp-for="DUI" /> <br />
-
-                            <label asp-for="INTERSECTION_RELATED"> INTERSECTION_RELATED: </label>
-                            <input asp-for="INTERSECTION_RELATED" /> <br />
-
-                            <label asp-for="WILD_ANIMAL_RELATED"> WILD_ANIMAL_RELATED: </label>
-                            <input asp-for="WILD_ANIMAL_RELATED" /> <br />
-
-                            <label asp-for="DOMESTIC_ANIMAL_RELATED"> DOMESTIC_ANIMAL_RELATED: </label>
-                            <input asp-for="DOMESTIC_ANIMAL_RELATED" /> <br />
-
-                            <label asp-for="OVERTURN_ROLLOVER"> OVERTURN_ROLLOVER: </label>
-                            <input asp-for="OVERTURN_ROLLOVER" /> <br />
-
-                            <label asp-for="COMMERCIAL_MOTOR_VEH_INVOLVED"> COMMERCIAL_MOTOR_VEH_INVOLVED: </label>
-                            <input asp-for="COMMERCIAL_MOTOR_VEH_INVOLVED" /> <br />
-
-                            <label asp-for="TEENAGE_DRIVER_INVOLVED"> TEENAGE_DRIVER_INVOLVED: </label>
-                            <input asp-for="TEENAGE_DRIVER_INVOLVED" /> <br />
-
-                            <label asp-for="OLDER_DRIVER_INVOLVED"> OLDER_DRIVER_INVOLVED: </label>
-                            <input asp-for="OLDER_DRIVER_INVOLVED" /> <br />
-
-                            <label asp-for="NIGHT_DARK_CONDITION"> NIGHT_DARK_CONDITION: </label>
-                            <input asp-for="NIGHT_DARK_CONDITION" /> <br />
-
-                            <label asp-for="SINGLE_VEHICLE"> SINGLE_VEHICLE: </label>
-                            <input asp-for="SINGLE_VEHICLE" /> <br />
-
-                            <label asp-for="DISTRACTED_DRIVING"> DISTRACTED_DRIVING: </label>
-                            <input asp-for="DISTRACTED_DRIVING" /> <br />
-
-                            <label asp-for="DROWSY_DRIVING"> DROWSY_DRIVING: </label>
-                            <input asp-for="DROWSY_DRIVING" /> <br />
-
-                            <label asp-for="ROADWAY_DEPARTURE"> ROADWAY_DEPARTURE: </label>
-                            <input asp-for="ROADWAY_DEPARTURE" /> <br />
-
-                            <label asp-for="CRASH_TIME"> CRASH_TIME: </label>
-                            <input asp-for="CRASH_TIME" /> <br />
-
-                            <label asp-for="DAY"> DAY: </label>
-                            <input asp-for="DAY" /> <br />
-
-                            <label asp-for="MONTH"> MONTH: </label>
-                            <input asp-for="MONTH" /> <br />
-
-                            <label asp-for="YEAR"> YEAR: </label>
-                            <input asp-for="YEAR" /> <br />
-
-                            <button type="submit"> Submit Application</button>
+                            <button type="submit" class="btn btn-primary"> Submit Application</button>
 
 
-                    </form>
+</form>
 
 
                 </div>
             </div>
         </div>
     </div>
-</div
+</div>
