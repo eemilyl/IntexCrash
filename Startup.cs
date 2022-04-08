@@ -83,8 +83,8 @@ namespace intex2
             services.AddRazorPages();
 
 
-            services.AddSingleton<InferenceSession>(
-                new InferenceSession("intex_crash.onnx"));
+            //services.AddSingleton<InferenceSession>(
+            //    new InferenceSession("intex_crash.onnx"));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
