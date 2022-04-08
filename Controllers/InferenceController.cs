@@ -7,6 +7,7 @@ using Microsoft.ML.OnnxRuntime;
 using Microsoft.ML.OnnxRuntime.Tensors;
 using intex2.Models;
 
+// 
 namespace aspnetcore.Controllers
 {
     public class InferenceController : Controller
@@ -29,7 +30,7 @@ namespace aspnetcore.Controllers
             {
                 NamedOnnxValue.CreateFromTensor("float_input", data.AsTensor())
             });
-            Tensor<int> score = result.First().AsTensor<int>();
+            Tensor<float> score = result.First().AsTensor<float>();
             var prediction = new Prediction { PredictedValue = score.First() };
             result.Dispose();
             return View("Score", prediction);

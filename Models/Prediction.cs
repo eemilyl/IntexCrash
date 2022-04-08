@@ -7,7 +7,7 @@ namespace intex2.Models
 {
     public class Prediction
     {
-        public int PredictedValue { get; set; }
+        public float PredictedValue { get; set; }
     }
 }
 

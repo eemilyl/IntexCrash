@@ -79,12 +79,12 @@ namespace intex2
                 options.UseMySql(
                     Configuration.GetConnectionString("DefaultConnection")));
             services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
-                .AddEntityFrameworkStores<ApplicationDbContext>();
+                .AddEntityFrameworkStores<ApplicationDbContext>();;
             services.AddRazorPages();
 
 
-            //services.AddSingleton<InferenceSession>(
-            //    new InferenceSession("intex_crash.onnx"));
+            services.AddSingleton<InferenceSession>(
+                new InferenceSession("intex_crash.onnx"));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
