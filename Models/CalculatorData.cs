@@ -3,7 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-
+// model for the Calculator inputs
 namespace intex2.Models
 {
     public class CalculatorData

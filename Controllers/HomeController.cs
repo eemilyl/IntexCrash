@@ -122,7 +122,8 @@ namespace intex2.Controllers
             //}
         }
         // For the edit: goes to the add accident form with the data populated in the fields
-            [HttpGet]
+        [Authorize]
+        [HttpGet]
         public IActionResult Edit(int CRASHID)
         {
 
@@ -131,6 +132,7 @@ namespace intex2.Controllers
             return View("NewAccident", application);
         }
         // Redirects to the Accident List
+        [Authorize]
         [HttpPost]
         public IActionResult Edit(Accident mv)
         {
@@ -141,7 +143,9 @@ namespace intex2.Controllers
         }
 
         // for the delete button, asks if the user wants to actually delete the record
+        [Authorize]
         [HttpGet]
+
         public IActionResult Delete(int applicationid)
         {
 
@@ -150,6 +154,7 @@ namespace intex2.Controllers
             return View(application);
         }
         // delete post
+        [Authorize]
         [HttpPost]
         public IActionResult Delete(Accident mv)
         {

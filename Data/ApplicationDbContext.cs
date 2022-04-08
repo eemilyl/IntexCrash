@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Text;
-
+// This connects to 
 namespace intex2.Data
 {
     public class ApplicationDbContext : IdentityDbContext

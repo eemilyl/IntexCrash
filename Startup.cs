@@ -60,11 +60,11 @@ namespace intex2
                 options.ExcludedHosts.Add("www.example.com");
             });
 
-            services.AddHttpsRedirection(options =>
-            {
-                options.RedirectStatusCode = (int)HttpStatusCode.TemporaryRedirect;
-                options.HttpsPort = 5001;
-            });
+            //services.AddHttpsRedirection(options =>
+            //{
+            //    options.RedirectStatusCode = (int)HttpStatusCode.TemporaryRedirect;
+            //    options.HttpsPort = 5001;
+            //});
 
             services.AddControllersWithViews();
             services.AddDbContext<AccidentsDbContext>(options =>
