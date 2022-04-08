@@ -8,11 +8,6 @@
 @inject UserManager<IdentityUser> UserManager
 @model AccidentsViewModel
 
-
-
-
-
-
 <div class="container">
     <main role="main" class="pb-3">
         <div class="row">
@@ -37,35 +32,11 @@
                             <td>Crash ID:  </td>
                             <td>Route:  </td>
                             <td>Mile Point:  </td>
-                            @*<td>Latitude:  </td>
-                                <td>Longitud: </td>*@
                             <td>Main Road Name: </td>
                             <td>City:  </td>
                             <td>County Name: </td>
                             <td>Severity:  </td>
                             <td> <a asp-controller="Home" asp-action="NewAccident" class="btn btn-primary"> Add new accident </a> </td>
-                            @*<td>Work Zone Related: </td>
-                                <td>Pedestrian Involved: </td>
-                                <td>Motorcycle Involved: </td>
-                                <td>Improper Restraint: </td>
-                                <td>Unrestrained: </td>
-                                <td>DUI: </td>
-                                <td>Intersection related: </td>
-                                <td>Wild animal related: </td>
-                                <td>Domestic animal related: </td>
-                                <td>Overturn Rollover: </td>
-                                <td>Commercial Motor vehicle involved: </td>
-                                <td>Teenage driver involved: </td>
-                                <td>Older driver involved: </td>
-                                <td>Night dark condition: </td>
-                                <td>Single vehicle: </td>
-                                <td>Distracted driving: </td>
-                                <td>Drowsy driving: </td>
-                                <td>Roadway departure: </td>
-                                <td>Crash time:</td>
-                                <td>Day: </td>
-                                <td>Month: </td>
-                                <td>Year: </td>*@
 
                         </tr>
                     </thead>
@@ -78,38 +49,10 @@
                                 <td>@x.CRASH_ID </td>
                                 <td>@x.ROUTE </td>
                                 <td>@x.MILEPOINT </td>
-                                @*<td>@x.LAT_UTM_Y </td>
-                                    <td>@x.LONG_UTM_X </td>*@
                                 <td>@x.MAIN_ROAD_NAME </td>
                                 <td>@x.CITY </td>
                                 <td>@x.COUNTY_NAME </td>
                                 <td>@x.CRASH_SEVERITY_ID</td>
-                                @*<td>@x.WORK_ZONE_RELATED</td>*@
-
-                                @*<td>@x.PEDESTRIAN_INVOLVED </td>
-                                    <td>@x.BICYCLIST_INVOLVED </td>
-                                    <td>@x.MOTORCYCLE_INVOLVED </td>
-                                    <td>@x.IMPROPER_RESTRAINT </td>
-                                    <td>@x.UNRESTRAINED </td>
-                                    <td>@x.DUI </td>
-                                    <td>@x.INTERSECTION_RELATED </td>
-                                    <td>@x.WILD_ANIMAL_RELATED </td>
-                                    <td>@x.DOMESTIC_ANIMAL_RELATED </td>
-                                    <td>@x.OVERTURN_ROLLOVER</td>
-                                    <td>@x.COMMERCIAL_MOTOR_VEH_INVOLVED</td>
-
-                                    <td>@x.TEENAGE_DRIVER_INVOLVED </td>
-                                    <td>@x.OLDER_DRIVER_INVOLVED </td>
-                                    <td>@x.NIGHT_DARK_CONDITION </td>
-                                    <td>@x.SINGLE_VEHICLE </td>
-                                    <td>@x.DISTRACTED_DRIVING </td>
-                                    <td>@x.DROWSY_DRIVING </td>
-                                    <td>@x.ROADWAY_DEPARTURE </td>
-                                    <td>@x.CRASH_TIME  </td>
-                                    <td>@x.DAY</td>
-                                    <td>@x.MONTH</td>
-                                    <td>@x.YEAR</td>*@
-
 
                                 <td><a asp-controller="Home" class="btn btn-warning" asp-action="Edit" asp-route-CRASHID="@x.CRASH_ID">Edit</a></td>
                                 <td><a asp-controller="Home" class="btn btn-danger" asp-action="Delete" asp-route-applicationid="@x.CRASH_ID">Delete</a></td>
