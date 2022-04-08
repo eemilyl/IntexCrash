@@ -51,6 +51,8 @@ namespace intex2
                 options.Password.RequiredUniqueChars = 1;
             });
 
+            //Adds HSTS to the website 
+
             services.AddHsts(options =>
             {
                 options.Preload = true;
@@ -59,6 +61,8 @@ namespace intex2
                 options.ExcludedHosts.Add("example.com");
                 options.ExcludedHosts.Add("www.example.com");
             });
+
+            //This redirects to the https' port, but does not work when we upload to AWS
 
             //services.AddHttpsRedirection(options =>
             //{
@@ -78,6 +82,7 @@ namespace intex2
             services.AddDbContext<ApplicationDbContext>(options =>
                 options.UseMySql(
                     Configuration.GetConnectionString("DefaultConnection")));
+            // This add the identity user for the admin
             services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
                 .AddEntityFrameworkStores<ApplicationDbContext>();;
             services.AddRazorPages();
